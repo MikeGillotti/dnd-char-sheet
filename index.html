@@ -6,38 +6,216 @@
 	<title>DND Character Sheet</title>
 </head>
 <body>
-	<div class="attributes">
+	<div class="panel attr">
 		<div class="att">
 			<label>Strength</label>
 			<input type="number" class="str" name="">
-			<p id="strmod"></p>
+			<p class="mod" id="strmod"></p>
 		</div>
 		<div class="att">
 			<label>Dexterity</label>
 			<input type="number" class="dex" name="">
-			<p id="dexmod"></p>
+			<p class="mod" id="dexmod"></p>
 		</div>
 		<div class="att">	
 			<label>Constitution</label>
 			<input type="number" class="con" name="">
-			<p id="conmod"></p>
+			<p class="mod" id="conmod"></p>
 		</div>
 		<div class="att">
 			<label>Intelligence</label>
 			<input type="number" class="int" name="">
-			<p id="intmod"></p>
+			<p class="mod" id="intmod"></p>
 		</div>
 		<div class="att">
 			<label>Wisdom</label>
 			<input type="number" class="wis" name="">
-			<p id="wismod"></p>
+			<p class="mod" id="wismod"></p>
 		</div>
 		<div class="att">
 			<label>Charisma</label>
 			<input type="number" class="cha" name="">
-			<p id="chamod"></p>
+			<p class="mod" id="chamod"></p>
 		</div>
 	
+	</div>
+	<div class="panel attr">
+		<div class="att">
+			<label>Proficiency Bonus</label>
+			<input type="number" id="pro-bonus">
+		</div>
+	</div>
+	<div class="panel">
+		
+		<div class="skill">
+				<div class="skill-check">
+					<select id="skill-select">
+						<option value="Acrobatics-check">Acrobatics</option>			  <option value="animalHandling-check">Animal Handling</option>
+						<option value="Arcana-check">Arcana</option>
+						<option value="Athletics-check">Athletics</option>
+						<option value="Deception-check">Deception</option>
+						<option value="History-check">History</option>
+						<option value="Insight-check">Insight</option>
+						<option value="Intimidation-check">Intimidation</option>
+						<option value="Investigation-check">Investigation</option>
+						<option value="Medicine-check">Medicine</option>
+						<option value="Nature-check">Nature</option>
+						<option value="Perception-check">Perception</option>
+						<option value="Performance-check">Performance</option>
+						<option value="Persuasion-check">Persuasion</option>
+						<option value="Religion-check">Religion</option>
+						<option value="sleightOfHand-check">Sleight of Hand</option>
+						<option value="Stealth-check">Stealth</option>
+						<option value="Survival-check">Survival</option>
+
+					</select>
+					<button id="skill-check-button">Skill Check</button>
+					<p id="skill-check-output"></p>
+					<h4>Roll History</h4>
+					<div class="rollclass"><label>1</label><p id="1"></p></div>
+					<div class="rollclass"><label>2</label><p id="2"></p></div>
+					<div class="rollclass"><label>3</label><p id="3"></p></div>
+					<div class="rollclass"><label>4</label><p id="4"></p></div>
+					<div class="rollclass"><label>5</label><p id="5"></p></div>
+					<div class="rollclass"><label>6</label><p id="6"></p></div>
+					<div class="rollclass"><label>7</label><p id="7"></p></div>
+					<div class="rollclass"><label>8</label><p id="8"></p></div>
+					<div class="rollclass"><label>9</label><p id="9"></p></div>
+					<div class="rollclass"><label>10</label><p id="10"></p></div>
+					<div class="rollclass"><label>11</label><p id="11"></p></div>
+					<div class="rollclass"><label>12</label><p id="12"></p></div>
+					<div class="rollclass"><label>13</label><p id="13"></p></div>
+					<div class="rollclass"><label>14</label><p id="14"></p></div>
+					<div class="rollclass"><label>15</label><p id="15"></p></div>
+					<div class="rollclass"><label>16</label><p id="16"></p></div>
+					<div class="rollclass"><label>17</label><p id="17"></p></div>
+					<div class="rollclass"><label>18</label><p id="18"></p></div>
+					<div class="rollclass"><label>19</label><p id="19"></p></div>
+					<div class="rollclass"><label>20</label><p id="20"></p></div>
+					<div class="rollclass"><label>Total</label><p id="total"></p></div>
+				</div>
+			<div class="skillset">
+			<div class="skillrow">
+				<input id="Acrobatics-prof" type="checkbox">
+				<input id="Acrobatics-expert" type="checkbox">
+				<label>Acrobatics</label>
+				<p class="skilldex" id="Acrobatics"></p>
+			
+			</div>
+			<div class="skillrow">
+				<input id="Arcana-prof" type="checkbox">
+				<input id="Arcana-expert" type="checkbox">
+				<label>Arcana</label>
+				<p id="Arcana"></p>
+			</div>
+			<div class="skillrow">
+				<input id="animalHandling-prof" type="checkbox">
+				<input id="animalHandling-expert" type="checkbox">
+				<label>Animal Handling</label>
+				<p id="animalHandling"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Athletics-prof" type="checkbox">
+				<input id="Athletics-expert" type="checkbox">
+				<label>Athletics</label>
+				<p id="Athletics"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Deception-prof" type="checkbox">
+				<input id="Deception-expert" type="checkbox">
+				<label>Deception</label>
+				<p id="Deception"></p>
+			</div>
+			<div class="skillrow">
+				<input id="History-prof" type="checkbox">
+				<input id="History-expert" type="checkbox">
+				<label>History</label>
+				<p id="History"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Insight-prof" type="checkbox">
+				<input id="Insight-expert" type="checkbox">
+				<label>Insight</label>
+				<p id="Insight"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Intimidation-prof" type="checkbox">
+				<input id="Intimidation-expert" type="checkbox">
+
+				<label>Intimidation</label>
+				<p id="Intimidation"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Investigation-prof" type="checkbox">
+				<input id="Investigation-expert" type="checkbox">
+
+				<label>Investigation</label>
+				<p id="Investigation"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Medicine-prof" type="checkbox">
+				<input id="Medicine-expert" type="checkbox">
+
+				<label>Medicine</label>
+				<p id="Medicine"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Nature-prof" type="checkbox">
+				<input id="Nature-expert" type="checkbox">
+
+				<label>Nature</label>
+				<p id="Nature"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Perception-prof" type="checkbox">
+				<input id="Perception-expert" type="checkbox">
+
+				<label>Perception</label>
+				<p id="Perception"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Performance-prof" type="checkbox">
+				<input id="Performance-expert" type="checkbox">
+
+				<label>Performance</label>
+				<p id="Performance"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Persuasion-prof" type="checkbox">
+				<input id="Persuasion-expert" type="checkbox">
+
+				<label>Persuasion</label>
+				<p id="Persuasion"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Religion-prof" type="checkbox">
+				<input id="Religion-expert" type="checkbox">
+
+				<label>Religion</label>
+				<p id="Religion"></p>
+			</div>
+			<div class="skillrow">
+				<input id="sleightOfHand-prof" type="checkbox">
+				<input id="sleightOfHand-expert" type="checkbox">
+
+				<label>Sleight of Hand</label>
+				<p id="sleightOfHand"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Stealth-prof" type="checkbox">
+				<input id="Stealth-expert" type="checkbox">
+
+				<label>Stealth</label>
+				<p id="Stealth"></p>
+			</div>
+			<div class="skillrow">
+				<input id="Survival-prof" type="checkbox">
+				<input id="Survival-expert" type="checkbox">
+				<label>Survival</label>
+				<p id="Survival"></p>
+			</div>
+		</div>
+		</div>
 	</div>
 <script type="text/javascript" src="script.js"> </script>
 </body>

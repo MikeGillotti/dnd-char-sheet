@@ -5,11 +5,12 @@
 	border:2px solid black;
 	flex-direction:column;
 	text-align: center;
-	width:20%;
+	width:10em;
 	color:white;
 	border-radius:5%;
 	margin-top:.5em;
 	box-shadow: 2px 2px 5px grey;
+
 	
 }
 input[type="number"]{
@@ -22,7 +23,7 @@ input[type="number"]{
 	-moz-appearance:textfield;
 	background-color:#BBE8F2;
 }
-.attributes p{
+.mod{
 	background:white;
 	border-radius: 45%;
 	width:4em;
@@ -31,5 +32,68 @@ input[type="number"]{
 	color:teal;
 	border:2px solid black;
 	background-color:#BBE8F2;
+
+}
+.attr{
+	font-size: 22px;
+	font-weight:700;
+	font-family:helvetica;
+}
+.panel{
+	display:flex;
+	flex-direction: row;
+}
+.skill{
+	display: flex;
+	padding: 1em;
+	background-color:teal;
+	width:40em;
+	margin-top:2em;
+		box-shadow: 2px 2px 5px grey;
+	border-radius:5%;
+
+}
+.skillrow{
+	margin-left: 20px;
+	width:100%;
+	display:flex;
+	color:#BBE8F2;
+font-size: 15px;
+	font-weight:600;
+	font-family:helvetica;
+}
+.skillrow p{
+	order:1;
+
+}
+.skillrow label{
+	order:2;
+	margin-left:20px;
+	margin-top:auto;
+	margin-bottom:auto;
+}
+.skill-check{
+	padding-left: 8em;
+	order: 2;
+float:right;}
+button{
+	background-color:#BBE8F2;
+	padding:.5em;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: helvetic;
+}
+
+.rollclass {
+	display:flex;
+	flex-direction:row
+
+}
+
+.rollclass p{
+	margin:auto;
+}
+.skillset{
+	order: 1;
 
 }
